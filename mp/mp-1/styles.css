@@ -4,10 +4,57 @@
     box-sizing: border-box;
 }
 
-/* Example of Navigation Bar Selectors From Class*/
+/* Selectors from Lab */
+#page-wrapper {
+    background-color: wheat;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+#nav-main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 nav {
+    width: 30%;
+    background-color: coral;
+}
+
+main {
+    height: 100vh;
+    width: 70%;
+    text-align: center;
+    font-size: calc(2px + 2vw);
+}
+
+main * {
+    margin: 2% 0;
+}
+
+nav ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+nav li {
+    border: 5px solid darkmagenta;
+    width: 80%;
+    margin: 5% auto;
+}
+
+nav a {
+    font-size: calc(2px + 2vw);
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+/* Example of Navigation Bar Selectors From Class*/
+/* nav {
     background-color: black;
     padding: 5px;
+    width: 30%;
 }
 
 nav ul {
@@ -28,3 +75,5 @@ nav a {
     font-weight: bold;
     color: #939b9f;
 }
+
+*/
