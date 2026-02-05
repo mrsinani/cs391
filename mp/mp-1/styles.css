@@ -6,9 +6,13 @@
 
 /* Selectors from Lab */
 #page-wrapper {
-    background-color: #FBFBFB;
+    background-color: #3BC1A8;
     margin: 0 auto;
     width: 80vw;
+}
+
+header {
+    text-align: left;
 }
 
 #nav-main {
@@ -19,7 +23,7 @@
 
 nav {
     width: 30%;
-    background-color: #E8F9FF;
+    background-color: #249E94;
 }
 
 main {
@@ -39,14 +43,14 @@ nav ul {
 }
 
 nav li {
-    border: 5px solid #C5BAFF;
+    border: 5px solid #0C7779;
     width: 80%;
     margin: 5% auto;
 }
 
 nav a {
     font-size: calc(2px + 2vw);
-    color: #C4D9FF;
+    color: #005461;
     text-decoration: none;
 }
 
@@ -77,3 +81,35 @@ nav a {
 }
 
 */
+
+@media screen and (max-width: 1000px) {
+    #nav-main {
+        flex-direction: column;
+    }
+
+    nav, main {
+        width: 100%;
+    }
+
+    main {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav li {
+        width: 18%;
+        padding: 1%;
+        margin: 1%;
+    }
+
+    header {
+        text-align: center;
+    }
+}
