@@ -6,7 +6,7 @@
 
 /* Selectors from Lab */
 #page-wrapper {
-    background-color: wheat;
+    background-color: #FBFBFB;
     margin: 0 auto;
     width: 80vw;
 }
@@ -19,7 +19,7 @@
 
 nav {
     width: 30%;
-    background-color: coral;
+    background-color: #E8F9FF;
 }
 
 main {
@@ -39,14 +39,14 @@ nav ul {
 }
 
 nav li {
-    border: 5px solid darkmagenta;
+    border: 5px solid #C5BAFF;
     width: 80%;
     margin: 5% auto;
 }
 
 nav a {
     font-size: calc(2px + 2vw);
-    color: cornflowerblue;
+    color: #C4D9FF;
     text-decoration: none;
 }
 
