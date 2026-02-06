@@ -54,6 +54,11 @@ nav a {
     text-decoration: none;
 }
 
+/* Negative result color */
+#negative {
+    color: red;
+}
+
 /* Example of Navigation Bar Selectors From Class*/
 /* nav {
     background-color: black;
@@ -87,7 +92,8 @@ nav a {
         flex-direction: column;
     }
 
-    nav, main {
+    nav,
+    main {
         width: 100%;
     }
 
