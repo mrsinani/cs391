@@ -37,16 +37,30 @@
     <main>
       <h1>Projects</h1>
 
-      <h2> This is my JavaScript Calculator</h2>
-      <input label="First Number" id="first-number">
-      <input label="Second Number" id="second-number">
-      <button onclick="addition()">Add</button>
-      <button onclick="subtract()">Subtract</button>
-      <button onclick="multiply()">Multiply</button>
-      <button onclick="divide()">Divide</button>
-      <button onclick="exponent()">Exponent</button>
-      <button onclick="clearCalculator()">Clear</button>
-      <p id="result"></p>
+      <h2>JavaScript Calculator</h2>
+      <!-- Calculator Container -->
+      <div id="calculator">
+        <!-- Inputs + Labels -->
+        <div id="calc-inputs">
+          <label for="first-number">First Number</label>
+          <input type="text" id="first-number">
+          <label for="second-number">Second Number</label>
+          <input type="text" id="second-number">
+        </div>
+
+        <!-- Buttons -->
+        <div id="calc-buttons">
+          <button onclick="addition()">+</button>
+          <button onclick="subtract()">-</button>
+          <button onclick="multiply()">*</button>
+          <button onclick="divide()">/</button>
+          <button onclick="exponent()">**</button>
+          <button onclick="clearCalculator()">Clear</button>
+        </div>
+
+        <!-- Result -->
+        <p id="result"></p>
+      </div>
     </main>
     </div>
     <!-- End Main -->

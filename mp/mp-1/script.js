@@ -1,65 +1,72 @@
 // Define global variables, code verbosity
-let firstNumber = document.getElementById("first-number");
-let secondNumber = document.getElementById("second-number");
-let result = document.getElementById("result");
+const firstNumber = document.getElementById("first-number");
+const secondNumber = document.getElementById("second-number");
+const result = document.getElementById("result");
 
 function calculate(a, b, operator) {
-    console.log(a, b, operator);
+    // Calculate the result based on the operator and values, and make the result red if the result is negative
+    let answer = 0;
+    // Switch statement to calculate based on operator
     switch (operator) {
         case "+":
-            result = Number(a.value) + Number(b.value);
+            // Calculate Answer
+            answer = Number(a.value) + Number(b.value);
             break;
         case "-":
-            result = Number(a.value) - Number(b.value);
+            answer = Number(a.value) - Number(b.value);
             break;
         case "*":
-            result = Number(a.value) * Number(b.value);
+            answer = Number(a.value) * Number(b.value);
             break;
         case "/":
-            result = Number(a.value) / Number(b.value);
+            answer = Number(a.value) / Number(b.value);
             break;
         case "**":
-            result = Number(a.value) ** Number(b.value);
+            // Initialize answer so it doesnt start at 0
+            answer = Number(a.value);
+            for (let i = 1; i < Number(b.value); i++) {
+                // Multiply answer by a, b times
+                answer = answer * Number(a.value);
+            }
             break;
         default:
-            result = "Invalid operator";
+            answer = "Invalid operator";
             break;
     }
-    console.log(result);
-    if (result < 0) {
+
+    // Check if the answer is negative and change the color of the result
+    if (answer < 0) {
         result.style.color = "red";
+    } else {
+        result.style.color = "";
     }
-    return result;
+    // Set the result to the answer
+    result.innerHTML = String(answer);
 }
 
 function addition() {
-    // Add the two numbers (use .value to get the value at the time of click of button)
-    let sum = Number(firstNumber.value) + Number(secondNumber.value);
-    calculate(firstNumber.value, secondNumber.value, "+");
+    // Add the two numbers (pass elements, not values)
+    calculate(firstNumber, secondNumber, "+");
 }
 
 function subtract() {
     // Subtract the two numbers
-    let sum = Number(firstNumber.value) - Number(secondNumber.value);
-    calculate(firstNumber.value, secondNumber.value, "-");
+    calculate(firstNumber, secondNumber, "-");
 }
 
 function multiply() {
     // Multiply the two numbers
-    let sum = Number(firstNumber.value) * Number(secondNumber.value);
-    calculate(firstNumber.value, secondNumber.value, "*");
+    calculate(firstNumber, secondNumber, "*");
 }
 
 function divide() {
     // Divide the two numbers
-    let sum = Number(firstNumber.value) / Number(secondNumber.value);
-    calculate(firstNumber.value, secondNumber.value, "/");
+    calculate(firstNumber, secondNumber, "/");
 }
 
 function exponent() {
     // Exponent the two numbers
-    let sum = Number(firstNumber.value) ** Number(secondNumber.value);
-    calculate(firstNumber.value, secondNumber.value, "**");
+    calculate(firstNumber, secondNumber, "**");
 }
 
 function clearCalculator() {
